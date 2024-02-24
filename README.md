@@ -156,7 +156,20 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgements
 The evaluation code (cmc & mAP) is partially borrowed from the [MARS-evaluation](https://github.com/liangzheng06/MARS-evaluation) repository. 
 
+## Citation
 
+Please consider citing the following paper if you find our codes helpful. Thank you!
+
+```
+@InProceedings{Cao_2023_CVPR,
+    author    = {Cao, Chengzhi and Fu, Xueyang and Liu, Hongjian and Huang, Yukun and Wang, Kunyu and Luo, Jiebo and Zha, Zheng-Jun},
+    title     = {Event-Guided Person Re-Identification via Sparse-Dense Complementary Learning},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {17990-17999}
+}
+```
 
 ## Contact
 Should you have any question, please contact chengzhicao@mail.ustc.edu.cn.
