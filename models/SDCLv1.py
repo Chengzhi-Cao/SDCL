@@ -328,6 +328,8 @@ class cross_alignment(nn.Module):
 
         self.att = Cross_Attention()
         self.deform = Cross_Deform()
+        self.alpha = 0.1
+        self.beta = 0.1
 
     def forward(self, event_f, img_f):
 
@@ -335,10 +337,10 @@ class cross_alignment(nn.Module):
         img_f1 = Cross_Deform(img_f,event_f)
 
         event_f2 = Cross_Attention(event_f,img_f)
-        img_f2 = Cross_Deform(img_f,event_f)
+        img_f2 = Cross_Attention(img_f,event_f)
 
-        event_f = event_f + event_f1 + event_f2
-        img_f = img_f + img_f1 + img_f2
+        event_f = event_f + self.alpha*event_f1 + self.beta *event_f2
+        img_f = img_f + self.alpha*img_f1 + self.beta*img_f2
 
         return event_f, img_f
     
