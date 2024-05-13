@@ -56,6 +56,7 @@ mars/
 
 7. Utilize [V2E](https://github.com/SensorsINI/v2e) to generate the corresponding event sequence.
 
+The event version of MARS is so large (almost 20,000 videos). In the following weeks, we will put our data in this link: https://pan.baidu.com/s/1jont6AXijx3bwLzeHblwnw password:y762 
 
 ### iLIDS-VID
 
