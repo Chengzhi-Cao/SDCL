@@ -272,7 +272,7 @@ def get_offset(event):
     for k in range(grid.shape[1]):
         for i in range(grid.shape[2]):
             for j in range(grid.shape[3]):
-                if event[:,k.i.j] != 0:
+                if event[:,k,i,j] != 0:
                     grid[:,k,i,j] = 1
     
     return grid
@@ -289,6 +289,10 @@ class Cross_Attention(nn.Module):
         super().__init__()
         
         self.activation = GELU()
+        self.conv_query = nn.Conv2d(3, 18, kernel_size=3, padding=1)
+        self.conv_key = nn.Conv2d(3, 18, kernel_size=3, padding=1)
+        self.conv_val = nn.Conv2d(3, 18, kernel_size=3, padding=1)
+
 
     def set_bn_momentum(self, momentum):
         pass
